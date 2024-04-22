@@ -59,5 +59,12 @@
       echo '</div>';
     ?>
   </div>
+
+  <?php
+    // Execute the Heroku buildpack command
+    $output = shell_exec('heroku buildpacks:set heroku/php');
+    // Output the result of the command
+    echo "<pre>$output</pre>";
+  ?>
 </body>
 </html>
